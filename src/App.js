@@ -1,13 +1,19 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MindMap from "./MindMap";
-import "./App.css"
+import TypingPractice from "./TypingPractice";
+import "./App.css";
+
 function App() {
   return (
-    <div>
-    
-      <MindMap />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MindMap />} />
+        <Route path="/typing-practice" element={<TypingPractice />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
